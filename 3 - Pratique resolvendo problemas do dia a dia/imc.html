@@ -9,10 +9,9 @@ document.write(frase)
 pulaLinha();
 }
 
-function calculaIMC(peso,altura){
+var calculaIMC = function(peso,altura){
 var imc = peso / (altura*altura);
-mostra("O IMC DO SEU PRIMO É "+imc.toFixed(2));
-pulaLinha();
+return imc
 }
 
 var peso = 78;
@@ -20,7 +19,9 @@ var pesoDoPrimo = 74;
 var altura = 1.74;
 var alturadoPrimo = 1.89;
 var imc = peso / (altura * altura);
-calculaIMC(pesoDoPrimo,alturadoPrimo);
+var imcDoPrimo = calculaIMC(pesoDoPrimo,alturadoPrimo);
 mostra("O seu IMC É de = "+imc.toFixed(2));
+mostra("O IMC do primo é = "+imcDoPrimo.toFixed(2))
+mostra("Ele ainda está "+(imcDoPrimo - 18.5).toFixed(2)+" Acima do limite da magreza")
 
 </script>
