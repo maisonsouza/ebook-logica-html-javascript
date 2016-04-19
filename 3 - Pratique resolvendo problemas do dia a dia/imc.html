@@ -2,17 +2,17 @@
 
 function pulaLinha(){
 document.write("<br>");
-}
+};
 
 function mostra(frase){
-document.write(frase)
+document.write(frase);
 pulaLinha();
-}
+};
 
 var calculaIMC = function(peso,altura){
 var imc = peso / (altura*altura);
-return imc
-}
+return imc;
+};
 
 var peso = 78;
 var pesoDoPrimo = 74;
@@ -20,8 +20,11 @@ var altura = 1.74;
 var alturadoPrimo = 1.89;
 var imc = peso / (altura * altura);
 var imcDoPrimo = calculaIMC(pesoDoPrimo,alturadoPrimo);
+var meuIMC = calculaIMC(peso,altura);
 mostra("O seu IMC É de = "+imc.toFixed(2));
 mostra("O IMC do primo é = "+imcDoPrimo.toFixed(2))
 mostra("Ele ainda está "+(imcDoPrimo - 18.5).toFixed(2)+" Acima do limite da magreza")
+mostra("Eu ainda estou "+(meuIMC - 18.5).toFixed(2)+" Acima do limite da magreza")
+mostra("Eu ainda estou "+(35-meuIMC).toFixed(2)+" Distante da Obesidade mórbida");
 
 </script>
