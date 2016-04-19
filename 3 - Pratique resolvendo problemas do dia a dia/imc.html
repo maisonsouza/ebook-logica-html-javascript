@@ -13,9 +13,9 @@ var calculaIMC = function(peso,altura){
 var imc = peso / (altura*altura);
 return imc;
 };
-
-var peso = prompt ("Qual o seu peso?");
-var altura = prompt("Qual a sua altura");
+var nome = prompt("Qual o seu nome ?");
+var peso = prompt (nome+" Qual o seu peso?");
+var altura = prompt(nome+ " Qual a sua altura ?");
 mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Distante da Obesidade mórbida");
 mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Acima do limite da magreza")
 </script>
