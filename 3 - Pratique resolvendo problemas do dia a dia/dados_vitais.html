@@ -13,10 +13,10 @@ return diasDeVida * 24 * 60 * 80;
 };
 
 var idade = prompt("Quantos anos vc tem ?");
-var diasDeVida = calculaDiasDeVida(idade);
+var diasDeVida = (calculaDiasDeVida(idade));
 document.write("Você já viveu "+diasDeVida);
 pulaLinha();
-var batimentos = calculaBatimentos(diasDeVida);
+var batimentos = calculaBatimentos(calculaDiasDeVida(diasDeVida));
 pulaLinha();
 document.write("Seu coração já bateu "+batimentos+ " vezes");
 </script>
