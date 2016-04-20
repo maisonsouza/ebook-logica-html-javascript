@@ -3,12 +3,14 @@
 var mostra = function(frase) {
 document.write(frase + "<br>");
 };
-
-var anoDeCopa = 1930;
+var anoDeOlimpiadas = 1896;
+var anoDeCopa = parseInt(prompt("Informe o ano inicial"));
 var anoLimite = prompt("Digite o ano limite");
-while(anoDeCopa<=anoLimite) {
+while(anoDeCopa<=anoLimite && anoDeOlimpiadas<=anoLimite) {
 mostra(anoDeCopa + " tem copa!");
+mostra(anoDeOlimpiadas+ " tem olimpíadas!");
 anoDeCopa = anoDeCopa + 4;
+anoDeOlimpiadas = anoDeOlimpiadas + 4;
 }
 mostra("Ufa! Esses foram os anos de copa até ."+anoLimite);
 </script>
