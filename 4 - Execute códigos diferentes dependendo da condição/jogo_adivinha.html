@@ -1,11 +1,33 @@
 <script>
-var numeroPensado = Math.round(Math.random()*10);
 
+function pulaLinha(){
+document.write("<br>");
+};
+
+function mostra(frase){
+document.write(frase);
+pulaLinha();
+};
+
+function sorteia(limite){
+return Math.round(Math.random()*limite);
+};
+
+
+var numeroPensado = sorteia(100);
 var chute = prompt("Já pensei. Qual você acha que é?");
+
+if(chute<numeroPensado){
+mostra("O numero pensado é MAIOR");
+}if(chute>numeroPensado){
+mostra("O número pensado é MENOR")
+}
+
 if(chute == numeroPensado) {
 mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
 } else {
 mostra("Você errou! Eu tinha pensado no " + numeroPensado);
 }
+
 
 </script>
