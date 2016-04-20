@@ -1,32 +1,40 @@
 <script>
 
 function pulaLinha(){
-document.write("<br>");
+	document.write("<br>");
 };
 
 function mostra(frase){
-document.write(frase);
-pulaLinha();
+	document.write(frase);
+	pulaLinha();
 };
 
 function sorteia(limite){
-return Math.round(Math.random()*limite);
+	return Math.round(Math.random()*limite);
 };
 
+function verifica_chute(chute){
+	if (isNaN(chute)){
+		mostra("Apenas números são válidos");
+		pulaLinha();
+	}
+};
 
-var numeroPensado = sorteia(100);
-var chute = prompt("Já pensei. Qual você acha que é?");
+	var numeroPensado = sorteia(100);
+	var chute = prompt("Já pensei. Qual você acha que é?");
+	verifica_chute(chute);
 
 if(chute<numeroPensado){
-mostra("O numero pensado é MAIOR");
-}if(chute>numeroPensado){
-mostra("O número pensado é MENOR")
+		mostra("O numero pensado é MAIOR");
+}
+if(chute>numeroPensado){
+	mostra("O número pensado é MENOR")
 }
 
 if(chute == numeroPensado) {
-mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
+	mostra("Uau! Você acertou, pois eu pensei no " + numeroPensado);
 } else {
-mostra("Você errou! Eu tinha pensado no " + numeroPensado);
+	mostra("Você errou! Eu tinha pensado no " + numeroPensado);
 }
 
 
