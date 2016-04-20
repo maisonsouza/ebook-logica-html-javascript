@@ -5,9 +5,10 @@ document.write(frase + "<br>");
 };
 
 var anoDeCopa = 1930;
-while(anoDeCopa<=10000) {
+var anoLimite = prompt("Digite o ano limite");
+while(anoDeCopa<=anoLimite) {
 mostra(anoDeCopa + " tem copa!");
 anoDeCopa = anoDeCopa + 4;
 }
-mostra("Ufa! Esses foram os anos de copa até 2014.");
+mostra("Ufa! Esses foram os anos de copa até ."+anoLimite);
 </script>
