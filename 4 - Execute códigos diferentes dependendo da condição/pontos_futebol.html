@@ -6,11 +6,33 @@ document.write("<br>");
 
 function mostra(frase){
 document.write(frase);
+pulaLinha();
+};
+
+function calculaPontos(vitorias,empates,derrotas){
+return (vitorias * 3) + parseInt(empates)-(derrotas * -1);
 };
 
 var vitorias = prompt("Quantas vitórias o time CDC tem");
 var empates = prompt ("Quantos empates o time CDC tem");
-var pontos = (vitorias * 3) + parseInt(empates);
+var derrotas = prompt("Quantas derrotas o time CDC tem");
+var vitorias_livrosvelhos = prompt ("Quantas vitórias o time LIVROS VELHOS tem?");
+var empates_livrosvelhos = prompt ("Quantos empates o time LIVROS VELHOS tem");
+var derrotas_livrosvelhos = prompt ("Quantas derrotas o time LIVROS VELHOS tem");
+var pontos = calculaPontos(vitorias,empates,derrotas);
+var pontos_adversario = calculaPontos(vitorias_livrosvelhos,empates_livrosvelhos,derrotas_livrosvelhos);
 mostra("Nosso time tem "+pontos);
+
+if(pontos > pontos_adversario) {
+mostra("Nosso time está indo MELHOR que o Livros Velhos!");
+}
+
+if(pontos < pontos_adversario) {
+mostra("Nosso time está indo PIOR que o Livros Velhos!");
+}
+
+if(pontos == pontos_adversario) {
+mostra("Nosso time está EMPATADO com o Livros Velhos!");
+}
 
 </script>
