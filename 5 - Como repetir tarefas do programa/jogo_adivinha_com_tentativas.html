@@ -1,0 +1,24 @@
+<script>
+function mostra(frase){
+document.write(frase+"<br>")
+};
+
+var numeroPensado = Math.round(Math.random() * 10);
+var numeroDaTentativa = 1;
+while(numeroDaTentativa <= 3) {
+var chute = parseInt(prompt("Qual você acha que é?"));
+if(chute == numeroPensado) {
+alert("Parabéns, você acertou!");
+break;
+} else {
+alert("Você errou. Você ainda tem mais"+(3-numeroDaTentativa)+" tentativas?");
+if(chute<numeroPensado){
+mostra("O número pensado é MAIOR");
+}else{
+mostra("O número pensado é MENOR");
+}
+numeroDaTentativa++;
+}
+}
+
+</script>
