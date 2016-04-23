@@ -1,33 +1,33 @@
+<meta charset="UTF-8">
 <script>
 
 var mostra = function(frase) {
 document.write(frase + "<br>");
 };
-<<<<<<< HEAD
 
-
-var anoDeCopa = prompt ("Informe ano inicial");
-var anoLimite = prompt("Qual o ano limite para pesquisa se tem Copa ?");
+mostra("COPAS DO MUNDO")
+var anoDeCopa = parseInt(prompt ("Informe ano inicial"));
+var anoLimite = parseInt(prompt("Qual o ano limite para pesquisa se tem Copa ?"));
 
 while (anoDeCopa <= anoLimite) {
 mostra ("Ano de Copa!! " +anoDeCopa);
 anoDeCopa = anoDeCopa + 4;
-mostra(anoDeCopa + " esse é o valor após a soma!");
+mostra(anoDeCopa + "  esse é o valor após a soma");
 }
 
 mostra("______________________________________");
 
 
-=======
 var anoDeOlimpiadas = 1896;
-var anoDeCopa = parseInt(prompt("Informe o ano inicial"));
+mostra("OLÍMPÍADAS")
+var anoDeCopa = parseInt(prompt("Informe o ano inicial das olimpíadas "));
 var anoLimite = prompt("Digite o ano limite");
 while(anoDeCopa<=anoLimite && anoDeOlimpiadas<=anoLimite) {
 mostra(anoDeCopa + " tem copa!");
-mostra(anoDeOlimpiadas+ " tem olimp�adas!");
+mostra(anoDeOlimpiadas+ " tem olimpíadas!");
 anoDeCopa = anoDeCopa + 4;
 anoDeOlimpiadas = anoDeOlimpiadas + 4;
 }
-mostra("Ufa! Esses foram os anos de copa at� ."+anoLimite);
->>>>>>> origin/master
+mostra("Ufa! Esses foram os anos de olímpíadas ."+anoLimite);
+
 </script>
