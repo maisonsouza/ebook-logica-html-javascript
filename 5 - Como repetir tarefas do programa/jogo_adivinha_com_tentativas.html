@@ -4,19 +4,19 @@ document.write(frase+"<br>")
 };
 
 var numeroPensado = Math.round(Math.random() * 10);
-var numeroDaTentativa = 1;
-while(numeroDaTentativa <= 3) {
+var tentativas = parseInt(prompt("Entre com o número de tentativas"));
+var numeroDaTentativa=1;
+while(numeroDaTentativa<=4 && chute!=numeroPensado) {
 var chute = parseInt(prompt("Qual você acha que é?"));
-if(chute == numeroPensado) {
+	if(chute == numeroPensado) {
 alert("Parabéns, você acertou!");
-break;
-} else {
-alert("Você errou. Você ainda tem mais"+(3-numeroDaTentativa)+" tentativas?");
-if(chute<numeroPensado){
+	} else {
+alert("Você errou. Você ainda tem mais"+(tentativas-numeroDaTentativa)+" tentativas?");
+	if(chute<numeroPensado){
 mostra("O número pensado é MAIOR");
-}else{
+	}else{
 mostra("O número pensado é MENOR");
-}
+	}
 numeroDaTentativa++;
 }
 }
