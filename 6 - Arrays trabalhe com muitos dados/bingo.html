@@ -1,5 +1,6 @@
 <input type="text" id="numero" />
 <input type="submit" value="Adicione e verifique no Bingo!" id="verificar"/>
+<input type="submit" value="Verifica acertos" id="verifica_acertos"/>
 
 <script>
 
@@ -15,7 +16,36 @@ function adicionarSorteado () {
 		console.log(sorteados);
 };
 
+function verificaAcertos(){
+	for(var i=0,acertos=0;i<sorteados.length;i++){
+	console.log(sorteados[i]);
+		for(j=0;j<palpites.length;j++){
+			if(sorteados[i] == palpites[j]){
+			acertos++;
+			document.write("Você acertou o número "+palpites[j]+"<br>");	
+			}
+		}
+	}
+	document.write(" total de acertos = "+acertos+"<br>");
+	return;	
+};
+
 var sorteados = [];
+var palpites = [];
+for(var numeros_sorteados=1;numeros_sorteados<=6;numeros_sorteados++){
+var numeroSorteado = parseInt(Math.random()*60);
+sorteados.push(numeroSorteado);
+console.log(sorteados);
+}
+
+for(var chances=1;chances<=6;chances++){
+var chutes = parseInt(prompt("Digite um palpite"));
+palpites.push(chutes);
+console.log(palpites);
+}
+var botao_acertos = document.getElementById("verifica_acertos");
+botao_acertos.onclick = verificaAcertos;
+console.log("Tudo finalizado");
 var botao = document.getElementById("verificar");
 botao.onclick = adicionarSorteado;
 
