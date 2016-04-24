@@ -4,10 +4,11 @@
 <script>
 var caixaDoNumero = document.getElementById("numero");
 var botaoAdivinhar = document.getElementById("adivinhar");
+
 function botaoClicado(){
-	for(var i =0;i<segredos.length;i++){
+	for(var i = 0;i<segredos.length;i++){
 		if(segredos[i]==caixaDoNumero.value){
-			alert("Parabéns! Você acertou um dos números secretos");
+			alert("Parabéns, você acertou o "+i+"º numero");
 			return;
 		}
 	}
