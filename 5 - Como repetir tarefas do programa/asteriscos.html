@@ -1,9 +1,12 @@
 <script>
-var tamanho = parseInt(prompt("Que tamanho você quer o quadrado ?"));
-for(var linha = 0; linha < tamanho; linha++) {
-for(var coluna = 0; coluna <= linha; coluna++) {
-document.write(" * ");
-}
+for(var linha = 0; linha <= 10; linha++) {
 document.write("<br>");
+for(var coluna = 0; coluna <=20; coluna++) {
+if(linha+coluna==20 || linha==coluna){
+document.write(" * ");
+}else{
+document.write(" - ");
+}
+}
 }
 </script>
