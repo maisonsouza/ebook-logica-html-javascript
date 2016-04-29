@@ -1,0 +1,21 @@
+<canvas id="tela" width="500" height="500"></canvas>
+
+<script>
+
+var desenhaQuadrado = function(x,y) {
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+c.fillStyle="white";
+c.fillRect(x, y, 20, 20);
+c.strokeStyle="black";
+c.strokeRect(x, y, 25, 25);
+};
+
+for(var y = 0; y <500; y=y+50) {
+for(var x = 0; x < 500; x=x+50) {
+
+desenhaQuadrado(x,y);
+
+}
+}
+</script>
