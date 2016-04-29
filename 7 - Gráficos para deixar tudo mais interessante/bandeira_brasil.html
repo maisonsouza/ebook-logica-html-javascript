@@ -1,0 +1,33 @@
+<canvas id="tela" width="600" height="400"></canvas>
+
+<script>
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+c.fillStyle="green";
+c.fillRect(0,0,600,400);
+
+c.fillStyle = "#FCFF00";
+c.beginPath();
+c.moveTo(300,20);
+c.moveTo(580,200);
+c.lineTo(300,380);
+c.lineTo(20,200);
+c.lineTo(300,20);
+c.fill();
+c.closePath(); 	
+
+c.fillStyle="blue";
+c.beginPath();
+c.arc(300, 200, 120, 0, 2*3.14);
+c.fill();
+
+
+c.beginPath();
+c.fillStyle="green";
+c.font="18px Arial";
+c.fillText("Ordem e Progresso",210,200);
+c.fill();
+c.closePath();
+
+
+</script>
