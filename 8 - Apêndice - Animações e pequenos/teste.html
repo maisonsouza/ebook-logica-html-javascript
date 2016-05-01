@@ -1,0 +1,66 @@
+<canvas id="lousa" width="500" height="400"></canvas>
+<script>
+// fazer uma tela com 2 cores para a pessoa escolher e desenhar bolinhas na lousa com ela.
+var lousa = document.getElementById("lousa");
+var l = lousa.getContext("2d");
+
+l.fillStyle = "lightgray";
+l.fillRect(0,0,500,400);
+
+// ferramentas:
+var laranja = function(){
+	l.fillStyle = "orange";
+	l.fillRect(0,0,30,30);
+}
+laranja();
+
+var verde = function(){
+	l.fillStyle = "green";
+	l.fillRect(0,40,30,30);
+}
+verde();
+
+//quando clicar na cor quero que verifique se o clique está na mesma posicao que uma das cores (escrevendo a posicao das cores) p escolher dai atribuir a cor ao fillStyle
+var corEscolhida = "darkgray"; //cor padrao enquanto o usuario não escolhe nenhuma cor.
+
+var bola = function(x, y, corEscolhida){	
+	l.fillStyle = corEscolhida;
+	l.beginPath();
+	l.arc(x, y, 10, 0, 2 * Math.PI);
+	l.fill();		
+		console.log("Posição do clique x " + x + ", y " + y);
+}
+
+var click = function(e){
+	var x = e.pageX - lousa.offsetLeft;
+	var y = e.pageY - lousa.offsetTop;
+		desenhar = true;
+			if(e.pageX > 0 && e.pageX < 40 && e.pageY > 0 && e.pageY < 40){
+			console.log("laranja");
+			desenhar = false;
+			corEscolhida = "orange";
+			console.log("Posição do clique x " + x + ", y " + y);
+			};
+			
+			if(e.pageX > 0 && e.pageX < 40 && e.pageY > 40 && e.pageY < 80){
+			console.log("verde");
+			desenhar = false;
+			corEscolhida = "green";
+			console.log("Posição do clique x " + x + ", y " + y);
+			};						
+							
+			if (desenhar){
+			bola(x, y, corEscolhida);
+			};
+						
+}
+
+lousa.onclick = click;
+
+
+	
+
+
+
+
+</script>

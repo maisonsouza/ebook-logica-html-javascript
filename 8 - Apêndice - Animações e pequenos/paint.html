@@ -1,0 +1,150 @@
+<canvas id="lousa" width="700" height="700"> </canvas>
+
+<script>
+var lousa = document.getElementById("lousa");
+var l = lousa.getContext("2d");
+l.fillStyle = "lightgray";
+l.fillRect(0,0,700,700);
+
+var preto = function(){
+	l.fillStyle = "black";
+	l.fillRect(0,0,40,40);
+}
+
+var verde = function(){
+	l.fillStyle = "green";
+	l.fillRect(40,0,40,40);
+}
+
+var amarelo = function(){
+	l.fillStyle = "yellow";
+	l.fillRect(80,0,40,40);
+}
+
+var vermelho = function(){
+	l.fillStyle = "red";
+	l.fillRect(120,0,40,40);
+}
+
+var marrom = function(){
+	l.fillStyle = "brown";
+	l.fillRect(160,0,40,40);
+}
+
+var branco = function(){
+	l.fillStyle = "white";
+	l.fillRect(200,0,40,40);
+}
+
+var azul = function(){
+	l.fillStyle = "blue";
+	l.fillRect(240,0,40,40);
+}
+
+var rosa = function(){
+	l.fillStyle = "pink";
+	l.fillRect(280,0,40,40);
+}
+
+
+
+var desenhaQuadradoDeCores = function(){
+ preto();
+ verde();
+ amarelo();
+ vermelho();
+ marrom();
+ branco();
+ azul();
+ rosa();
+}
+
+var corEscolhida = "darkgray";
+
+var desenhaNoQuadro = function(x, y, corEscolhida){	
+	l.fillStyle = corEscolhida;
+	l.beginPath();
+	l.arc(x, y, 10, 0, 2 * Math.PI);
+	l.fill();		
+		console.log("Posição do clique x " + x + ", y " + y);
+}
+
+var clickDoMouse = function(ev) {
+	var x = ev.pageX - lousa.offsetLeft;
+	var y = ev.pageY - lousa.offsetTop;
+	desenhar = true;
+	
+if(ev.pageX>0 && ev.pageX<40 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "black";
+	console.log("preto");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>40 && ev.pageX<80 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "green";
+	console.log("verde");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>80 && ev.pageX<120 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "yellow";
+	console.log("amarelo");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>120 && ev.pageX<160 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "red";
+	console.log("vermelho");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>160 && ev.pageX<200 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "brown";
+	console.log("marrom");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>200 && ev.pageX<240 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "white";
+	console.log("branco");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>240 && ev.pageX<280 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "blue";
+	console.log("azul");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if(ev.pageX>280 && ev.pageX<320 && ev.pageY>0 && ev.pageY<40){
+	desenhar = false;
+	corEscolhida = "pink";
+	console.log("rosa");
+	console.log("Posição do clique x " + x + ", y " + y);
+	
+};
+
+if (desenhar==true){
+			desenhaNoQuadro(x, y, corEscolhida);
+};
+
+}
+
+desenhaQuadradoDeCores();
+lousa.onclick = clickDoMouse;
+
+</script>
