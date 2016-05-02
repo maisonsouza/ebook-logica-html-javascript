@@ -5,27 +5,24 @@ Idade: <input type="text" id="idade" /><br><br>
 <input type="submit" value="Adicionar" id="botao_adicionar"/>
 
 <script>
-var  adicionarDados = function (nome,email,idade) {
-console.log("Entrei na função");
-	pessoa.nome = nome
-	pessoa.email = email
-	pessoa.idade = idade
-	console.log(pessoa);
-
-};
-	
-	
-	
-	
-var pessoa = {
-nome: Maison,
-email:maisongalvao144@gmail.com,
-idade:26
-};
-
-	
-
+var campo_nome = document.getElementById("nome");
+var campo_email = document.getElementById("email");
+var campo_idade = document.getElementById("idade");
 var botao = document.getElementById("botao_adicionar");
 
- botao.onclick = adicionarDados(caixa_nome,caixa_email,caixa_idade);
+var  adicionarDados = function () {
+console.log("Entrei na função");
+	pessoa.nome = campo_nome;
+	pessoa.email = campo_email;
+	pessoa.idade = campo_idade;
+	console.log(pessoa);
+};
+		
+var pessoa = {
+nome: campo_nome,
+email:campo_email,
+idade:campo_idade
+}
+
+botao.onclick = adicionarDados();
 </script>
