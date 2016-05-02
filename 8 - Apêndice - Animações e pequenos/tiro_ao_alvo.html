@@ -1,0 +1,78 @@
+<canvas id="tela" width="600" height="400"></canvas> 
+
+<script>
+var tela = document.getElementById("tela");
+var c = tela.getContext("2d");
+
+var cor = function(cor){
+ c.fillStyle=cor;
+};
+
+var circulo = function(x, y, raio) {
+console.log("Função círculo");
+cor;
+c.beginPath();
+c.arc(x, y, raio, 0, 2*Math.PI);
+c.fill();
+};
+
+var limpa = function() {
+c.clearRect(0, 0, 600, 400);
+};
+
+
+var sorteia = function(limite){
+var n = Math.round(Math.random() * limite)
+console.log("N = "+n);
+return n;
+};
+
+var raio = 40;
+var desenhaAlvo = function(x, y) {
+
+cor("white");
+circulo(x, y, raio);
+cor("red");
+circulo(x, y, raio-10);
+cor("white");
+circulo(x, y, raio-20);
+cor("red");
+circulo(x, y, raio-30);
+};
+
+var alvoX;
+var alvoY;
+
+var pontosDoJogo = function(pontos){
+   c.font="20px Georgia";
+c.fillText("Pontuação = "+pontos,10,50);
+};
+
+var desenha = function() {
+limpa();
+alvoX = sorteia(600);
+alvoY = sorteia(400);
+desenhaAlvo(alvoX,alvoY);
+};
+var pontos=0;
+var clickDoMouse = function(ev) {
+console.log("Entrei aqui para verificar acerto");
+	var x = ev.pageX - tela.offsetLeft;
+	var y = ev.pageY - tela.offsetTop;
+	var alvo = alvoX+raio;
+	if((x > alvoX - raio) && (x < alvoX + raio) &&
+                (y > alvoY - raio) && (y < alvoY + raio)) {
+				pontos = pontos+1;
+                        alert("acertou o alvo!");
+						pontosDoJogo(pontos);
+        }
+	else
+	console.log("Errou");
+}
+
+//desenhaAlvo(50,100);
+pontosDoJogo(pontos);
+tela.onclick=clickDoMouse;
+setInterval(desenha, 2000)
+
+</script>
