@@ -1,0 +1,31 @@
+Nome: <input type="text" id="nome" /><br><br>
+Email: <input type="text" id="email" /><br><br>
+Idade: <input type="text" id="idade" /><br><br>
+
+<input type="submit" value="Adicionar" id="botao_adicionar"/>
+
+<script>
+var  adicionarDados = function (nome,email,idade) {
+console.log("Entrei na função");
+	pessoa.nome = nome
+	pessoa.email = email
+	pessoa.idade = idade
+	console.log(pessoa);
+
+};
+	
+	
+	
+	
+var pessoa = {
+nome: Maison,
+email:maisongalvao144@gmail.com,
+idade:26
+};
+
+	
+
+var botao = document.getElementById("botao_adicionar");
+
+ botao.onclick = adicionarDados(caixa_nome,caixa_email,caixa_idade);
+</script>
