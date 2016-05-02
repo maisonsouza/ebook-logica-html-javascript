@@ -5,10 +5,15 @@ var tela = document.getElementById("tela");
 var c = tela.getContext("2d");
 
 var circulo = function(x, y, raio) {
-c.fillStyle = "blue";
+c.strokeStyle = "blue";
 c.beginPath();
 c.arc(x, y, raio, 0, 2*Math.PI);
-c.fill();
+c.stroke();
+};
+
+var desenhaImagem = function (){
+c.drawImage(imagem, x, y)
+x=x+2;
 };
 
 var limpaTela = function() {
@@ -16,17 +21,21 @@ c.clearRect(0, 0, 600, 400);
 };
 
 
-var x = 1;
+
 var raio = 1
+
 var desenha = function() {
-limpaTela();
+//limpaTela();
 circulo(x, 100, raio);
 x = x + 10;
 raio = raio + 1;
 };
-
-
-setInterval(desenha, 30);
+var x = 1;	
+var y = 1;
+var imagem = new Image();
+imagem.src = "paulo-silveira.jpg"
+setInterval(desenhaImagem, 20);
+desenhaImagem();
 
 
 
