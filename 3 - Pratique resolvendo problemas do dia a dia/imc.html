@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <script>
 
 function pulaLinha(){
@@ -9,13 +10,19 @@ document.write(frase);
 pulaLinha();
 };
 
-var calculaIMC = function(peso,altura){
-var imc = peso / (altura*altura);
+function calculaIMC(peso,altura){
+var imc;
+imc = peso / (altura*altura);
 return imc;
 };
+
+var obesidademorbida = 40;
+var magreza = 17;
+
 var nome = prompt("Qual o seu nome ?");
-var peso = prompt (nome+" Qual o seu peso?");
-var altura = prompt(nome+ " Qual a sua altura ?");
-mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Distante da Obesidade mórbida");
-mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Acima do limite da magreza")
+var peso = parseInt(prompt(nome+" Qual o seu peso?"));
+var altura = prompt("Qual a sua altura ?");
+var meu_imc = (calculaIMC(peso,altura).toFixed(2));
+mostra("Eu ainda estou "+parseInt(meu_imc - obesidademorbida)+" Distante da Obesidade mÃ³rbida");
+mostra("Eu ainda estou "+parseInt(meu_imc - magreza)+" Acima do limite da magreza");
 </script>
