@@ -1,3 +1,4 @@
+<meta charset="utf-8"/>
 <script>
 
 function pulaLinha(){
@@ -19,16 +20,16 @@ var peso = prompt (nome+" Qual o seu peso?");
 var altura = prompt(nome+ " Qual a sua altura ?");
 var imcDoUsuario = calculaIMC(peso,altura);
 if(imcDoUsuario<18.5){
-mostra("Seu IMC indica que você está ABAIXO do peso.");
+mostra("Seu IMC indica que vocÃª estÃ¡ ABAIXO do peso.");
 }
 
 if(imcDoUsuario > 35) {
-mostra("Seu IMC indica que você está ACIMA do peso.");
+mostra("Seu IMC indica que vocÃª estÃ¡ ACIMA do peso.");
 }
 
 if(imcDoUsuario >=18.5 && imcDoUsuario<=35){
-mostra("Seu IMC está nos padrões aceitavéis");
+mostra("Seu IMC estÃ¡ nos padrÃµes aceitavÃ©is");
 }
-mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Distante da Obesidade mórbida");
+mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Distante da Obesidade mÃ³rbida");
 mostra("Eu ainda estou "+(calculaIMC(peso,altura)).toFixed(2)+" Acima do limite da magreza")
 </script>
