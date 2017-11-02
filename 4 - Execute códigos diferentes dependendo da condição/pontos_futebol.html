@@ -1,3 +1,4 @@
+<meta charset="utf-8"/>
 <script>
 
 function pulaLinha(){
@@ -13,10 +14,10 @@ function calculaPontos(vitorias,empates,derrotas){
 return (vitorias * 3) + parseInt(empates)-(derrotas * -1);
 };
 
-var vitorias = prompt("Quantas vitÛrias o time CDC tem");
+var vitorias = prompt("Quantas vit√≥rias o time CDC tem");
 var empates = prompt ("Quantos empates o time CDC tem");
 var derrotas = prompt("Quantas derrotas o time CDC tem");
-var vitorias_livrosvelhos = prompt ("Quantas vitÛrias o time LIVROS VELHOS tem?");
+var vitorias_livrosvelhos = prompt ("Quantas vit√≥rias o time LIVROS VELHOS tem?");
 var empates_livrosvelhos = prompt ("Quantos empates o time LIVROS VELHOS tem");
 var derrotas_livrosvelhos = prompt ("Quantas derrotas o time LIVROS VELHOS tem");
 var pontos = calculaPontos(vitorias,empates,derrotas);
@@ -24,15 +25,17 @@ var pontos_adversario = calculaPontos(vitorias_livrosvelhos,empates_livrosvelhos
 mostra("Nosso time tem "+pontos);
 
 if(pontos > pontos_adversario) {
-mostra("Nosso time est· indo MELHOR que o Livros Velhos!");
+  diferenca = pontos - pontos_adversario
+mostra("Nosso time est√° "+diferenca+"pontos na frente portanto MELHOR que o Livros Velhos!");
 }
 
 if(pontos < pontos_adversario) {
-mostra("Nosso time est· indo PIOR que o Livros Velhos!");
+  var diferenca = pontos_adversario - pontos
+mostra("Nosso time est√° "+diferenca+" pontos Atr√°s portanto PIOR que o Livros Velhos!");
 }
 
 if(pontos == pontos_adversario) {
-mostra("Nosso time est· EMPATADO com o Livros Velhos!");
+mostra("Nosso time est√° EMPATADO com o Livros Velhos!");
 }
 
 </script>
