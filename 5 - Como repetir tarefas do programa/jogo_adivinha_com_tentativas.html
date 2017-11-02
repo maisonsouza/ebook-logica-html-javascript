@@ -1,24 +1,31 @@
+<meta charset="UTF-8">
+
 <script>
+
 function mostra(frase){
-document.write(frase+"<br>")
+	document.write(frase+"<br>")
 };
 
 var numeroPensado = Math.round(Math.random() * 10);
-var tentativas = parseInt(prompt("Entre com o número de tentativas"));
+var tentativas = parseInt(prompt("Entre com o nÃºmero de tentativas"));
 var numeroDaTentativa=1;
-while(numeroDaTentativa<=4 && chute!=numeroPensado) {
-var chute = parseInt(prompt("Qual você acha que é?"));
+
+while(numeroDaTentativa<=tentativas && chute!=numeroPensado) {
+	var chute = parseInt(prompt("Qual nÃºmero vocÃª acha que Ã©?"));
+
 	if(chute == numeroPensado) {
-alert("Parabéns, você acertou!");
-	} else {
-alert("Você errou. Você ainda tem mais"+(tentativas-numeroDaTentativa)+" tentativas?");
-	if(chute<numeroPensado){
-mostra("O número pensado é MAIOR");
-	}else{
-mostra("O número pensado é MENOR");
+		alert("ParabÃ©ns, vocÃª acertou!");
+		break;
 	}
-numeroDaTentativa++;
-}
+	else if(chute<numeroPensado){
+		mostra("O nÃºmero pensado Ã© MAIOR");
+		numeroDaTentativa++;
+	}
+	else if(chute>numeroPensado){
+		mostra("O nÃºmero pensado Ã© MENOR");
+		numeroDaTentativa++;
+	}
+
 }
 
 </script>
