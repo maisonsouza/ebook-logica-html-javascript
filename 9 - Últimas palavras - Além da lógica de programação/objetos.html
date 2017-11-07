@@ -1,7 +1,7 @@
+<meta charset="UTF-8"/>
 Nome: <input type="text" id="nome" /><br><br>
 Email: <input type="text" id="email" /><br><br>
 Idade: <input type="text" id="idade" /><br><br>
-
 <input type="submit" value="Adicionar" id="botao_adicionar"/>
 
 <script>
@@ -10,19 +10,15 @@ var campo_email = document.getElementById("email");
 var campo_idade = document.getElementById("idade");
 var botao = document.getElementById("botao_adicionar");
 
-var  adicionarDados = function () {
-console.log("Entrei na função");
-	pessoa.nome = campo_nome;
-	pessoa.email = campo_email;
-	pessoa.idade = campo_idade;
-	console.log(pessoa);
+var  adicionarDados = function() {
+	var pessoa = {
+		nome : campo_nome.value,
+		idade : campo_idade.value,
+		email : campo_email.value
+	};
+	console.log("nome: "+pessoa.nome);
+	console.log("idade: "+pessoa.idade);
+	console.log("email: "+pessoa.email);
 };
-		
-var pessoa = {
-nome: campo_nome,
-email:campo_email,
-idade:campo_idade
-}
-
-botao.onclick = adicionarDados();
+botao.onclick = adicionarDados;
 </script>

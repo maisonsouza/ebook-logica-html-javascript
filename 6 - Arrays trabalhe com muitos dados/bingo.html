@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <input type="text" id="numero" />
 <input type="submit" value="Adicione e verifique no Bingo!" id="verificar"/>
 <input type="submit" value="Verifica acertos" id="verifica_acertos"/>
@@ -8,7 +9,7 @@ function adicionarSorteado () {
 	var numero = document.getElementById("numero").value;
 		for(var i=0;sorteados[i]<=sorteados.length;i++){
 			if(numero==sorteados[i]){
-				alert("Número já existe")
+				alert("NÃºmero jÃ¡ existe")
 				return;
 			}
 		}
@@ -22,12 +23,12 @@ function verificaAcertos(){
 		for(j=0;j<palpites.length;j++){
 			if(sorteados[i] == palpites[j]){
 			acertos++;
-			document.write("Você acertou o número "+palpites[j]+"<br>");	
+			document.write("VocÃª acertou o nÃºmero "+palpites[j]+"<br>");
 			}
 		}
 	}
 	document.write(" total de acertos = "+acertos+"<br>");
-	return;	
+	return;
 };
 
 var sorteados = [];

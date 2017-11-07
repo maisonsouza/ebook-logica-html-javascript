@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <canvas id="lousa" width="700" height="700"> </canvas>
 
 <script>
@@ -61,81 +62,81 @@ var desenhaQuadradoDeCores = function(){
 
 var corEscolhida = "darkgray";
 
-var desenhaNoQuadro = function(x, y, corEscolhida){	
+var desenhaNoQuadro = function(x, y, corEscolhida){
 	l.fillStyle = corEscolhida;
 	l.beginPath();
 	l.arc(x, y, 10, 0, 2 * Math.PI);
-	l.fill();		
-		console.log("Posição do clique x " + x + ", y " + y);
+	l.fill();
+		console.log("Posiï¿½ï¿½o do clique x " + x + ", y " + y);
 }
 
 var clickDoMouse = function(ev) {
 	var x = ev.pageX - lousa.offsetLeft;
 	var y = ev.pageY - lousa.offsetTop;
 	desenhar = true;
-	
+
 if(ev.pageX>0 && ev.pageX<40 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "black";
 	console.log("preto");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£oo do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>40 && ev.pageX<80 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "green";
 	console.log("verde");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£oo do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>80 && ev.pageX<120 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "yellow";
 	console.log("amarelo");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>120 && ev.pageX<160 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "red";
 	console.log("vermelho");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>160 && ev.pageX<200 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "brown";
 	console.log("marrom");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>200 && ev.pageX<240 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "white";
 	console.log("branco");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>240 && ev.pageX<280 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "blue";
 	console.log("azul");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if(ev.pageX>280 && ev.pageX<320 && ev.pageY>0 && ev.pageY<40){
 	desenhar = false;
 	corEscolhida = "pink";
 	console.log("rosa");
-	console.log("Posição do clique x " + x + ", y " + y);
-	
+	console.log("PosiÃ§Ã£o do clique x " + x + ", y " + y);
+
 };
 
 if (desenhar==true){
@@ -144,7 +145,7 @@ if (desenhar==true){
 
 }
 
-document.write("Lousa mágica");
+document.write("Lousa mÃ¡gica");
 desenhaQuadradoDeCores();
 lousa.onclick = clickDoMouse;
 

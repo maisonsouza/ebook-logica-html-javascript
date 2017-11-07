@@ -1,3 +1,4 @@
+<meta charset="UTF-8">
 <canvas id="tela" width="600" height="400"></canvas>
 
 <script>
@@ -14,7 +15,7 @@ c.fillStyle="blue";
 c.beginPath();
 c.arc(x, y, 10, 0, 2*3.14);
 c.fill();
-console.log("posição do clique : " + x + ", " + y);
+console.log("posiÃ§Ã£o do clique : " + x + ", " + y);
 };
 
 desenhaCirculoVermelho = function(evento) {
@@ -24,7 +25,7 @@ c.fillStyle="red";
 c.beginPath();
 c.arc(x, y, 10, 0, 2*3.14);
 c.fill();
-console.log("posição do clique : " + x + ", " + y);
+console.log("PosiÃ§Ã£o do clique : " + x + ", " + y);
 };
 
 tela.onmousemove = desenhaCirculoAzul;

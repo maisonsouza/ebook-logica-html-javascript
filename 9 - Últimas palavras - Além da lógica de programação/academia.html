@@ -1,0 +1,32 @@
+<meta charset="UTF-8"/>
+
+Cadastro Academia<br><br>
+Nome: <input type="text" id="nome" /><br><br>
+Idade: <input type="text" id="idade" /><br><br>
+Peso: <input type="text" id="peso" /><br><br>
+Altura: <input type="text" id="altura" /><br><br>
+<input type="submit" value="Gerar Relatório" id="botao_adicionar"/>
+
+<script>
+var campo_nome = document.getElementById("nome");
+var campo_idade = document.getElementById("idade");
+var campo_peso = document.getElementById("peso");
+var campo_altura = document.getElementById("altura");
+var botao = document.getElementById("botao_adicionar");
+
+
+function calculaIMC (){
+  var pessoa = {
+    nome : campo_nome.value,
+    idade:campo_idade.value,
+    peso : campo_peso.value,
+    altura:campo_altura.value
+  };
+
+  var imc =  pessoa.peso / (pessoa.altura*pessoa.altura);
+  alert("IMC = "+imc);
+};
+
+botao.onclick = calculaIMC;
+
+</script>
