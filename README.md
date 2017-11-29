@@ -9,9 +9,7 @@
 <h3>Navegador Chrome: <a href="https://www.google.com/chrome/browser/desktop/index.html#"> Chrome </a></h3>
 
 <h3>Extra: Curso online na Alura : <a href="https://cursos.alura.com.br/course/logica-programacao-javascript-html"> Curso Lógica de programação I: Os primeiros programas com Javascript e HTML </a>
-<h2>Sumário
 
-<div class="toc">
 
 <h2>Sumário</h2>
 <ul>
