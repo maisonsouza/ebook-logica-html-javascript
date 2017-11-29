@@ -1,5 +1,6 @@
-<a href="src/capa.png"></a>
+
 <h1>Exercícios resolvidos do livro Lógica de Programação - Crie seus primeiros programas usando Javascript e HTML</h1>
+<img src="docs/img/capa.png" alt="Foto do Livro"/>
 <h2> Exercícios separados por capítulo </h2>
 <h3> Livro utilizado <a href="https://www.casadocodigo.com.br/products/livro-programacao"> Livro </a></h3>
 <h3> Softwares utilizados:
@@ -8,6 +9,7 @@
 <h2>Sumário
 
 <div class="toc">
+
 <h1>Sumário</h1>
 <ul>
 <li>1 - Comece a programar hoje</li>
