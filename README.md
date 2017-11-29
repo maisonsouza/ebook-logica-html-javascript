@@ -1,7 +1,8 @@
+<a href="src/capa.png"></a>
 <h1>Exercícios resolvidos do livro Lógica de Programação - Crie seus primeiros programas usando Javascript e HTML</h1>
 <h2> Exercícios separados por capítulo </h2>
 <h3> Livro utilizado <a href="https://www.casadocodigo.com.br/products/livro-programacao"> Livro </a></h3>
-<h3> Softwares utilizados: 
+<h3> Softwares utilizados:
 <h3>Editor Atom:<a href="https://atom.io/"> Atom </a></h3>
 <h3>Navegador Chrome: <a href="https://www.google.com/chrome/browser/desktop/index.html#"> Chrome </a></h3>
 <h2>Sumário
@@ -104,5 +105,3 @@
 </ul>
 </ul>
 </div>
-
-
