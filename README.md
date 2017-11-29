@@ -13,7 +13,7 @@
 
 <div class="toc">
 
-<h1>Sumário</h1>
+<h2>Sumário</h2>
 <ul>
 <li>1 - Comece a programar hoje</li>
 <ul>
