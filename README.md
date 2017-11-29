@@ -24,6 +24,7 @@
 <li>1.7 - Socorro! Meu programa não funciona. Conheça e use o console do Chrome</li>
 <li>1.8 - Socorro! A acentuação não está funcionando corretamente</li>
 </ul>
+
 <li>2 - Comunique-se com o usuário</li>
 <ul>
 <li>2.1 - Dê olá ao mundo de outras formas</li>
@@ -40,6 +41,7 @@
 <li>2.12 - Para saber mais: comentários</li>
 <li>2.13 - Compartilhe seu código com seus amigos!</li>
 </ul>
+
 <li>3 - Pratique resolvendo problemas do seu dia a dia</li>
 <ul>
 <li>3.1 - Como está seu peso? Saudável?</li>
@@ -51,6 +53,7 @@
 <li>3.7 - Você já entendeu a ordem das chamadas das funções?</li>
 <li>3.8 - Utilize o console do Chrome para fazer testes!</li>
 </ul>
+
 <li>4 - Execute códigos diferentes dependendo da condição</li>
 <ul>
 <li>4.1 - Quantos pontos tem seu time de futebol?</li>
@@ -60,6 +63,7 @@
 <li>4.5 - Jogo: adivinhe o número que estou pensando</li>
 <li>4.6 - Revisando seu código: o jogo da adivinhação</li>
 </ul>
+
 <li>5 - Como repetir tarefas do programa?</li>
 <ul>
 <li>5.1 - Quando serão as próximas copas do mundo?</li>
@@ -75,6 +79,7 @@
 <li>5.11 - Revisando nosso código: O jogo da adivinhação dos números</li>
 <li>5.12 - Exercícios: trabalhando com um loop dentro do outro</li>
 </ul>
+
 <li>6 - Arrays: trabalhe com muitos dados</li>
 <ul>
 <li>6.1 - Integre o JavaScript com HTML</li>
@@ -82,6 +87,7 @@
 <li>6.3 - Facilite o jogo da adivinhação colocando mais números!</li>
 <li>6.4 - Evite os número repetidos no Bingo</li>
 </ul>
+
 <li>7 - Apêndice - Gráficos para deixar tudo mais interessante</li>
 <ul>
 <li>7.1 - Desenhe linhas e figuras</li>
@@ -91,6 +97,7 @@
 <li>7.5 - Cansei de repetir código! Funções novamente</li>
 <li>7.6 - Loops e funções para nos ajudar</li>
 </ul>
+
 <li>8 - Apêndice - Animações e pequenos jogos</li>
 <ul>
 <li>8.1 - Crie uma lousa capturando o movimento do mouse</li>
@@ -99,6 +106,7 @@
 <li>8.4 - Revise e faça novas animações</li>
 <li>8.5 - Desafio: o jogo do tiro ao alvo</li>
 </ul>
+
 <li>9 - Últimas palavras - Além da lógica de programação</li>
 <ul>
 <li>9.1 - Objetos</li>
